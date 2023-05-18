@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Website</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- <script src="assets/java.js"></script> -->
+
+  <script>
+    $(document).ready(function() {
+      $("#searchButton").click(function() {
+        var keyword = $("#searchInput").val();
+        if (keyword !== "") {
+          $("body *:contains(" + keyword + ")").each(function() {
+            $(this).html($(this).html().replace(keyword, "<span class='highlight'>" + keyword + "</span>"));
+          });
+          var count = $("body .highlight").length;
+          if (count > 0) {
+            alert("Found " + count + " occurrences of the keyword '" + keyword + "'.");
+          } else {
+            alert("Keyword '" + keyword + "' not found.");
+          }
+        }
+        loop:true;
+      });
+    });
+  </script>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <a href="#" class="logo"><img src="/assets/images/fast.png" alt="" width="100px" height="100px"></a>
+
+        <ul class="navlist">
+            <li><a href="#">Home</a></li>          
+            <li><a href="/shop.html">Shop</a></li> 
+            <li><a href="/about.html">About</a></li>
+
+        </ul>
+        <li>
+         <input type="search" id="searchInput" name="search" placeholder="Search...">
+        <a id="searchButton" class="btn">search</a>
+        </li>
+    </header>
+
+    <!-- main-section -->
+    <section class="main">
+      <div class="video-background">
+        <video autoplay loop muted>
+          <source src="assets/video/v1.mp4" type="video/mp4">
+          <source src="assets/video/v1.mp4" type="video/webm">
+          <source src="assets/video/v1.mp4" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+        <div class="content">
+          <!-- Your content goes here -->
+          <div class="main-text">
+            <h4>Save up to 60% off</h4>
+            <h1>the natural <br> Food Stuff <span class="input"></span> </h1>
+            <p>Start working with <span>Foods</span> that can provide every foodstuff that you need to create a happy and balanced life you dream of.</p>
+
+            <a href="#" class="btn">View Demos</a>
+        </div>
+        </div>
+      
+      
+       
+        </div>
+    </section>
+    <footer class="footer">
+      <div class="social-media-icons">
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <div class="social-media-newsfeed">
+        <h3>Stay Connected</h3>
+        <p>Check out our latest updates and news on social media:</p>
+        <!-- Add your social media newsfeed code or embed here -->
+        <a class="twitter-timeline" href="https://twitter.com/MLildaps">Tweets by Me</a> 
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      </div>
+      <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+    <script src="/assets/java.js"></script>
+</body>
+</html>
